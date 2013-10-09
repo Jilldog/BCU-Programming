@@ -20,6 +20,15 @@
                        isDebug="0" optimisation="2" targetName="DemoPlugin"/>
       </CONFIGURATIONS>
     </VS2010>
+    <XCODE_MAC targetFolder="Builds/MacOSX" objCExtraSuffix="hrGkv8" juceFolder="/juce/"
+               vstFolder="/SDKs/">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="GainLaws"
+                       osxSDK="default" osxCompatibility="default" osxArchitecture="32BitUniversal"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="2" targetName="GainLaws"
+                       osxSDK="default" osxCompatibility="default" osxArchitecture="32BitUniversal"/>
+      </CONFIGURATIONS>
+    </XCODE_MAC>
   </EXPORTFORMATS>
   <MAINGROUP id="dYAMo6Ykd" name="GainLaws">
     <FILE id="u6JEPh" name="VUmeter.h" compile="0" resource="0" file="Source/VUmeter.h"/>
