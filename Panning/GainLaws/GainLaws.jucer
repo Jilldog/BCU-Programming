@@ -3,7 +3,7 @@
 <JUCERPROJECT id="0nRd9LLGO" name="GainLaws" projectType="audioplug" version="1.0.0"
               juceLinkage="amalg_multi" buildVST="1" buildRTAS="0" buildAU="0"
               pluginName="GainLaws" pluginDesc="GainLaws" pluginManufacturer="NGRJ"
-              pluginManufacturerCode="Manu" pluginCode="NGLA" pluginChannelConfigs="{2,2}"
+              pluginManufacturerCode="Manu" pluginCode="NGLA" pluginChannelConfigs="{1,2},{2,2}"
               pluginIsSynth="0" pluginWantsMidiIn="0" pluginProducesMidiOut="0"
               pluginSilenceInIsSilenceOut="0" pluginTailLength="0" pluginEditorRequiresKeys="0"
               pluginAUExportPrefix="GainLawsAU" pluginAUViewClass="GainLawsAU_V1"

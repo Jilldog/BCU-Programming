@@ -65,6 +65,11 @@ void GainLawsAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer
 			R = cos(C*(M_PI/2));
 		}
 		// Apply gain
+		if (numTracks == 1)
+		{
+			buffer.clear(1,0,numSamples);
+			buffer.copyFrom(1,0,buffer.getSampleData(0),numSamples);
+		}
 		buffer.applyGain(0,0,numSamples,(float)R);
 		buffer.applyGain(1,0,numSamples,(float)L);
 	}

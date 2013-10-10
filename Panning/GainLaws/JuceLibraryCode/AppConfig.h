@@ -123,6 +123,10 @@
  //#define JUCE_DONT_AUTOLINK_TO_WIN32_LIBRARIES
 #endif
 
+#ifndef    JUCE_INCLUDE_ZLIB_CODE
+ //#define JUCE_INCLUDE_ZLIB_CODE
+#endif
+
 //==============================================================================
 // juce_graphics flags:
 
@@ -195,7 +199,7 @@
  #define JucePlugin_MaxNumOutputChannels   2
 #endif
 #ifndef  JucePlugin_PreferredChannelConfigurations
- #define JucePlugin_PreferredChannelConfigurations  {2,2}
+ #define JucePlugin_PreferredChannelConfigurations  {1,2},{2,2}
 #endif
 #ifndef  JucePlugin_IsSynth
  #define JucePlugin_IsSynth                0
