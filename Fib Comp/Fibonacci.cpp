@@ -2,6 +2,7 @@
 
 // This include allows you to use a function called cout which prints information to the console
 #include <iostream>
+using namespace std;
 
 // The function main is called when a program first runs.
 int main()
