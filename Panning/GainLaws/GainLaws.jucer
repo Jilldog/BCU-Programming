@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="0nRd9LLGO" name="GainLaws" projectType="audioplug" version="1.0.0"
-              juceLinkage="amalg_multi" buildVST="1" buildRTAS="0" buildAU="0"
+              juceLinkage="amalg_multi" buildVST="0" buildRTAS="0" buildAU="1"
               pluginName="GainLaws" pluginDesc="GainLaws" pluginManufacturer="NGRJ"
               pluginManufacturerCode="Manu" pluginCode="NGLA" pluginChannelConfigs="{1,2},{2,2}"
               pluginIsSynth="0" pluginWantsMidiIn="0" pluginProducesMidiOut="0"
@@ -12,16 +12,18 @@
               pluginAAXCategory="AAX_ePlugInCategory_Dynamics">
   <EXPORTFORMATS>
     <VS2010 targetFolder="Builds/VisualStudio2010" libraryType="1" juceFolder="C:\JUCE\"
-            vstFolder="C:\VST">
+            vstFolder="C:\VST" rtasFolder="c:\SDKs\PT_80_SDK" extraLinkerFlags=" /FORCE:multiple">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
-                       isDebug="1" optimisation="1" targetName="DemoPlugin"/>
+                       isDebug="1" optimisation="1" targetName="DemoPlugin" msvcModuleDefinitionFile="C:\JUCE\juce_audio_plugin_client\RTAS\juce_RTAS_WinExports.def"
+                       postbuildCommand="copy /Y &quot;C:\JUCE\juce_audio_plugin_client\RTAS\juce_RTAS_WinResources.rsr&quot; &quot;$(TargetPath)&quot;.rsr"/>
         <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
-                       isDebug="0" optimisation="2" targetName="DemoPlugin"/>
+                       isDebug="0" optimisation="2" targetName="DemoPlugin" msvcModuleDefinitionFile="C:\JUCE\juce_audio_plugin_client\RTAS\juce_RTAS_WinExports.def"
+                       postbuildCommand="copy /Y &quot;C:\JUCE\juce_audio_plugin_client\RTAS\juce_RTAS_WinResources.rsr&quot; &quot;$(TargetPath)&quot;.rsr"/>
       </CONFIGURATIONS>
     </VS2010>
     <XCODE_MAC targetFolder="Builds/MacOSX" objCExtraSuffix="hrGkv8" juceFolder="/juce/"
-               vstFolder="/SDKs/">
+               vstFolder="/SDKs/" rtasFolder="~/SDKs/PT_80_SDK">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="GainLaws"
                        osxSDK="default" osxCompatibility="default" osxArchitecture="32BitUniversal"/>
